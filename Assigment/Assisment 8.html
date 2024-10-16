@@ -1,0 +1,30 @@
+<html>
+    <label for="numberInput">Enter a weight:</label>
+    <input type="number" id="weit">
+    <label for="numberInput">Enter a height:</label>
+    <input type="number" id="heit">
+    <button type="button" onclick="bmi()">Submit</button>
+    <p id="bmii"> Your BMI:</p>
+
+<script>
+    function bmi() {
+            var weight = document.getElementById("weit").value;
+            var ht = document.getElementById("heit").value;
+            var height = ht / 100;
+            var bmical = weight / height ** 2;
+            if (bmical < 18.5) {
+                document.getElementById("bmii").textContent = "under weight"
+            }
+            else if (bmical < 24.9 && bmical > 18.5) {
+                document.getElementById("bmii").textContent = "normal weight"
+            }
+            else if (bmical < 29.9 && bmical > 24.5) {
+                document.getElementById("bmii").textContent = "over  weight"
+            }
+            else {
+                document.getElementById("bmii").textContent = "obese"
+            }
+        }
+
+</script>
+</html>
